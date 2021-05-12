@@ -1,0 +1,12 @@
+.background-design {
+  background-color: lightblue;
+  /* color: white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-centre {
+  display: flex;
+  justify-content: center;
+}
