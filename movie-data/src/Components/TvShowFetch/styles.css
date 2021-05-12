@@ -1,5 +1,6 @@
 .background-design {
   background-color: lightskyblue;
+  /* color: white; */
   display: flex;
   flex-direction: column;
   justify-content: center;

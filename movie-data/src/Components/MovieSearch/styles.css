@@ -1,0 +1,22 @@
+.Movie__thumbnail {
+  border-radius: 30px;
+  width: 10em;
+  height: 10em;
+}
+
+.movieStyles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-centre {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+select {
+  margin-top: 0.75em;
+  margin-bottom: 30px;
+}
