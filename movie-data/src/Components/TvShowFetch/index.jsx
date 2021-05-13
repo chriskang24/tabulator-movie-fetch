@@ -36,7 +36,6 @@ const TVShowFetch = () => {
       first_air_date: s['first_air_date'],
       overview: s['overview'],
     }))
-    console.log(data)
     return data;
   }
 
@@ -46,7 +45,6 @@ const TVShowFetch = () => {
       axios.get(getPopularShows),
       axios.get(getTopRatedShows),
     ]).then((responses) => {
-      console.log('here', tvShowResultsMapping(responses[0].data.results))
       const showsAiringToday = tvShowResultsMapping(responses[0].data.results)
       const popularShows = tvShowResultsMapping(responses[1].data.results)
       const topRatedShows = tvShowResultsMapping(responses[2].data.results)

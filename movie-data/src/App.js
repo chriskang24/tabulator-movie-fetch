@@ -15,7 +15,7 @@ const App = () => {
       </div>
       <Switch>
         <Route path="/" exact>
-          <HomePage />
+          <HomePage/>
         </Route>
         <Route path="/movie-statistics">
           <MovieFetch />

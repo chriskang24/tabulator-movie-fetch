@@ -1,7 +1,7 @@
 .Movie__thumbnail {
   border-radius: 30px;
-  width: 10em;
-  height: 10em;
+  width: 25em;
+  height: 25em;
 }
 
 .movieStyles {
@@ -16,13 +16,8 @@
   margin-top: 3em;
 }
 
-select {
-  margin-bottom: 30px;
-}
-
 .MuiContainer-maxWidthSm {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
@@ -32,3 +27,8 @@ select {
   margin: 3px;
 }
 
+.MuiContainer-root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

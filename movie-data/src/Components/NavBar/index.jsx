@@ -35,11 +35,11 @@ export default function NavBar() {
   const classes = useStyles();
 
   return (
+  <ThemeProvider theme={themeMode}>
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar className="nav-bar-spacing">
-          <Typography variant="h6" color="inherit">
-            <ThemeProvider theme={themeMode}>
+       
               
                     <Button component={Link} to="/" > Home </Button>
                     <Button component={Link} to="/movie-statistics"> Movie Statistics </Button>
@@ -47,11 +47,11 @@ export default function NavBar() {
                     <GlobalStyles />
                     <Toggle theme={theme} toggleTheme={themeToggler} />
            
-            </ThemeProvider>
-          </Typography>
+  
         </Toolbar>
       </AppBar>
     </div>
+   </ThemeProvider>
   );
 }
 
