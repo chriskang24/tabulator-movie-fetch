@@ -1,16 +1,41 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
-
 import SearchBar from "../SearchBar/index";
 import Results from "./results";
 import "./styles.css"
+import { makeStyles } from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 const API_KEY = process.env.REACT_APP_TMDB_KEY;
+
+const useStyles = makeStyles((theme) => ({
+  button: {
+    display: 'block',
+    marginTop: theme.spacing(2),
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+}));
+
 
 export default function MovieSearch({ setState }) {
   const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
   const [filter, setFilter] = useState("movies");
+  const [open, setOpen] = useState(false);
+
+  const classes = useStyles();
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
   useEffect(() => {
 
@@ -32,18 +57,26 @@ export default function MovieSearch({ setState }) {
   }, [term, filter]);
 
   return (
-    <Fragment>
+    <>
       <div className="flex-centre">
-        <select
-          onChange={(event) => setFilter(event.target.value)}
-          value={filter}
-        >
-          <option value="movies">Movies</option>
-          <option value="shows">TV Shows</option>
-        </select>
+        <div>
+          <FormControl className={classes.formControl}>
+            <Select
+              labelId="demo-controlled-open-select-label"
+              id="demo-controlled-open-select"
+              open={open}
+              onClose={handleClose}
+              onOpen={handleOpen}
+              onChange={(event) => setFilter(event.target.value)}
+              value={filter}
+            >
+              <option value="movies">Movies</option>
+              <option value="shows">TV Shows</option>
+            </Select>
+          </FormControl>
+        </div>
 
         <SearchBar
-
           onSearch={(term) => {
             if (term || term !== "") {
               setState(true);
@@ -53,9 +86,7 @@ export default function MovieSearch({ setState }) {
             setTerm(term);
           }
           }
-
         >
-
         </SearchBar>
       </div>
       <div className="movieStyles">
@@ -64,7 +95,11 @@ export default function MovieSearch({ setState }) {
           filter={filter}
         />
       </div>
-    </Fragment>
+    </>
   );
 }
+
+
+
+
 

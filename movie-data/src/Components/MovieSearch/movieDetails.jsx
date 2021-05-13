@@ -19,7 +19,7 @@ export default function MovieDetails(props) {
         {
           props.filter === 'movies' &&
           <ul>
-            <li> Movie Title: {props.title}</li>
+            <h2> Movie Title: {props.title}</h2>
             <li> Release Date: {props.release_date}</li>
             <li> Overview: {props.overview}</li>
           </ul>
@@ -27,7 +27,7 @@ export default function MovieDetails(props) {
         {
           props.filter === 'shows' &&
           <ul>
-            <li> TV Show Title: {props.name}</li>
+            <h2> TV Show Title: {props.name}</h2>
             <li> First Air Date: {props.first_air_date}</li>
             <li> Overview: {props.overview}</li>
           </ul>

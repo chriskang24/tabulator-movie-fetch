@@ -66,6 +66,16 @@ const TVShowFetch = () => {
     // { title: "Backdrop Path", field: "backdrop_path", hozAlign: "center", sorter: "alphanum", width: 500 },
     { title: "Overview", field: "overview", hozAlign: "center", sorter: "alphanum", width: 1000 },
   ];
+
+  const options = {
+    pagination: 'local',
+    paginationSize: 20,
+    paginationSizeSelector: [20, 50, 100],
+    layout: 'fitDataFill',
+    movableColumns: true,
+    selectable: true,
+  };
+
   return (
     <div>
       <div className="background-design">
@@ -75,6 +85,8 @@ const TVShowFetch = () => {
           columns={columns}
           tooltips={true}
           layout={"fitData"}
+          options={options}
+
         />
       </div>
       <div className="background-design">
@@ -84,6 +96,7 @@ const TVShowFetch = () => {
           columns={columns}
           tooltips={true}
           layout={"fitData"}
+          options={options}
         />
       </div>
       <div className="background-design">
@@ -93,6 +106,7 @@ const TVShowFetch = () => {
           columns={columns}
           tooltips={true}
           layout={"fitData"}
+          options={options}
         />
       </div>
     </div>

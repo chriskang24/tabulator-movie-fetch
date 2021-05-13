@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import MovieSearch from '../MovieSearch/index';
 import ScrollButton from '../ScrollButton'
 import FeaturedFetch from '../FeaturedFetch'
@@ -8,9 +8,9 @@ export default function HomePage() {
 
   return (
     <div>
-      <MovieSearch setState={setState}/>
-      {!state && <FeaturedFetch /> }
-      <ScrollButton/>
+      <MovieSearch setState={setState} />
+      {!state && <FeaturedFetch />}
+      <ScrollButton />
     </div>
   );
 }

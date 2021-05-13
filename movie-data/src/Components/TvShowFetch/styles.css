@@ -1,14 +1,13 @@
 .background-design {
-  background-color:rgb(182, 220, 255);
-
-  /* color: white; */
+  background-color: #152b48;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
 .title-centre {
   display: flex;
   justify-content: center;
+  color: white;
 }
-

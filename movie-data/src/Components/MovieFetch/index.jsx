@@ -74,6 +74,15 @@ const MovieFetch = () => {
     { title: "Overview", field: "overview", hozAlign: "center", sorter: "alphanum", width: 1000 },
   ];
 
+  const options = {
+    pagination: 'local',
+    paginationSize: 20,
+    paginationSizeSelector: [20, 50, 100],
+    layout: 'fitDataFill',
+    movableColumns: true,
+    selectable: true,
+  };
+
   return (
     <div>
       <div className="background-design">
@@ -83,6 +92,7 @@ const MovieFetch = () => {
           columns={columns}
           tooltips={true}
           layout={"fitData"}
+          options={options}
         />
       </div>
       <div className="background-design">
@@ -92,6 +102,7 @@ const MovieFetch = () => {
           columns={columns}
           tooltips={true}
           layout={"fitData"}
+          options={options}
         />
       </div>
       <div className="background-design">
@@ -101,6 +112,7 @@ const MovieFetch = () => {
           columns={columns}
           tooltips={true}
           layout={"fitData"}
+          options={options}
         />
       </div>
       <div className="background-design">
@@ -110,6 +122,7 @@ const MovieFetch = () => {
           columns={columns}
           tooltips={true}
           layout={"fitData"}
+          options={options}
         />
       </div>
     </div>

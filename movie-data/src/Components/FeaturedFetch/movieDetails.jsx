@@ -11,13 +11,13 @@ export default function TrendingMovieDetails(props) {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="sm">
-        <img 
+        <img
           className="Movie__thumbnail"
           src={posterUrl + props.backdrop_path}
           alt="Movie"
         />
         <ul>
-          <li> Movie Title: {props.title}</li>
+          <h2> Movie Title: {props.title}</h2>
           <li> Release Date: {props.release_date}</li>
           <li> Overview: {props.overview}</li>
         </ul>
