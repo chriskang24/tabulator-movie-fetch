@@ -1,8 +1,8 @@
 # Tabulator Movie Data Project
 
-A React App where users can view trending statistics on the lastest movies/tv shows & search for media queries.
+A React App where users can view trending statistics on the latest Movies / TV shows and search for media results.
 
-App Demo hosted at: ""
+App Demo hosted at: https://tabulator-movie-fetch.vercel.app/
 
 ## Key Features
 - Check Recent Movie / TV Show Statistics generated using Tabulator chart framework
