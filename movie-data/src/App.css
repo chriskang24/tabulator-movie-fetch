@@ -9,7 +9,7 @@
 
 body {
   font-family: sans-serif !important;
-  /* font-size: medium !important */
+  background-color: #152b48 !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
